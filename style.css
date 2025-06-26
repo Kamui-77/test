@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  background-color: #A8E6CF;
+  position: fixed; /* 位置を固定 */
+  top: 0; /* 上端に配置 */
+  width: 100%; /* 横幅いっぱいに広げる */
+  z-index: 100; /* 他の要素より前面に表示 */
+}
+
+/* ヘッダーの下のコンテンツが隠れないように余白を追加 */
+.profile_top {
+  margin-top: 80px; /* ヘッダーの高さ分の余白 */
+}
+ 
+header h2 {
+  margin-left: 10px; /* 左側に少し余白を作る */
+}
+ 
+.profile_top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    text-align: center;
+}
+ 
+.profile_top img {
+  max-width: 100%; /* 親要素の幅を超えないようにする */
+  height: auto; /* 縦横比を保ったまま調整する */
+  max-height: 300px; /* 最大の高さを指定する */
+}
+ 
+.profile_about {
+  background-color: #D1F2EB;
+  padding: 20px; /* 内側に余白を作る */
+  text-align: center; /* テキストを中央揃えにする */
+}
+ 
+.profile_about h2 {
+  margin-bottom: 20px; /* 見出しの下に余白を作る */
+}
+ 
+.profile_about_content p {
+  margin-top: 10px; /* 段落の上に余白を作る */
+  line-height: 1.5; /* 行間を広げて読みやすくする */
+}
+ 
+.profile_favorite {
+  background-color: #AEE1F9;
+  padding: 20px; /* 内側に余白を作る */
+  text-align: center; /* テキストを中央揃えにする */
+}
+ 
+.profile_favorite h2 {
+  margin-bottom: 20px; /* 見出しの下に余白を作る */
+}
+ 
+.profile_favorite_area {
+  margin-top: 20px; /* 上部に余白を作る */
+}
+ 
+.profile_favorite_area img {
+    border-radius: 10px; /* 角を丸くする */
+    max-width: 100%; /* 親要素の幅を超えないようにする */
+      height: auto; /* 縦横比を保ったまま調整する */
+      max-height: 300px; /* 最大の高さを指定する */
+}
+ 
+.profile_favorite_area p {
+  margin-top: 10px; /* 画像と文章の間に余白を作る */
+}
+ 
+.profile_place {
+  background-color: #F8F1E1;
+  padding: 20px; /* 内側に余白を作る */
+  text-align: center; /* テキストを中央揃えにする */
+}
+ 
+.profile_place h2 {
+  margin-bottom: 20px; /* 見出しの下に余白を作る */
+}
+ 
+.profile_place iframe {
+  width: 80%; /* レスポンシブ対応で親要素の80%に */
+  max-width: 800px; /* 最大幅を設定 */
+  height: 400px; /* 高さを固定 */
+}
+ 
+.profile_place p {
+  margin-top: 20px; /* 地図と説明文の間に余白を作る */
+  text-align: center; /* テキストを中央揃えにする */
+}
+
+.profile_about h2,
+.profile_favorite h2,
+.profile_place h2 {
+    font-size: 36px; /* 見出しを大きく */
+    margin-bottom: 20px; /* 下に余白を追加 */
+}
+
+.profile_video {
+  background-color: #E0F7FA; /* 背景色 */
+  padding: 100px 20px;
+  text-align: center;
+}
+ 
+.profile_video h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+ 
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9のアスペクト比 */
+  height: 0;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+ 
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+ 
+.profile_video p {
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+ 
+footer {
+  background-color: #333333; /* 背景色を暗めのグレーに設定 */
+  color: white; /* 文字色を白に設定 */
+  text-align: center; /* テキストを中央揃えにする */
+  padding: 20px; /* 内側に余白を作る */
+}
+
+/* スマホ向けのスタイル */
+@media (max-width: 768px) {
+  /* トップ部分を縦並びに変更 */
+  .profile_top {
+    flex-direction: column;
+  }
+ 
+  /* 画像サイズを調整 */
+  .profile_favorite_area img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ナビゲーションメニューのスタイル */
+nav {
+  float: right; /* 右寄せ */
+  margin-right: 30px;
+}
+ 
+nav ul {
+  list-style: none; /* リストの点を消す */
+  padding: 0;
+}
+ 
+nav li {
+  display: inline-block; /* 横並び */
+  margin-left: 20px;
+}
+ 
+nav a {
+  color: #004D40; /* リンクの色 */
+  text-decoration: none; /* 下線を消す */
+  font-weight: bold;
+}
+ 
+nav a:hover {
+  text-decoration: underline; /* マウスを乗せたとき下線表示 */
+}
+ 
+/* スマホ向けの調整 */
+@media (max-width: 768px) {
+  nav {
+    float: none;
+    margin: 10px 0;
+    text-align: center;
+  }
+ 
+  nav li {
+    margin: 0 10px;
+  }
+}
